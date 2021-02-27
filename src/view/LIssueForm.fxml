@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootIssue" prefHeight="625.0" prefWidth="1072.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IssueFormController">
+   <children>
+      <Label layoutX="23.0" text="Issue Books">
+         <font>
+            <Font name="Angsana New Bold" size="30.0" />
+         </font></Label>
+      <AnchorPane layoutX="14.0" layoutY="50.0" prefHeight="244.0" prefWidth="496.0" style="-fx-background-color: #9ad8f1; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="26.0" layoutY="24.0" text="Check last issue details :-">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <JFXTextField fx:id="txtMemId" labelFloat="true" layoutX="249.0" layoutY="19.0" onAction="#txtGetLastIssue" promptText="Enter Member Id">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <TableView fx:id="tblLastIssue" layoutX="26.0" layoutY="73.0" prefHeight="138.0" prefWidth="445.0" style="-fx-background-radius: 30;">
+              <columns>
+                <TableColumn fx:id="clmLastIId" prefWidth="57.0" text="Issue Id" />
+                <TableColumn fx:id="clmLastBId" prefWidth="59.0" text="Book Id" />
+                  <TableColumn fx:id="clmLastBName" prefWidth="82.0" text="Book Name" />
+                  <TableColumn fx:id="clmLastIDate" prefWidth="81.0" text="Issue Date" />
+                  <TableColumn fx:id="clmLastRDate" prefWidth="91.0" text="Return Date" />
+                  <TableColumn fx:id="clmLastMemId" text="Member Id" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="521.0" layoutY="50.0" prefHeight="373.0" prefWidth="538.0" style="-fx-background-color: #eed8aa; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="21.0" layoutY="28.0" text="Issue Id">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="lblDate" layoutX="433.0" layoutY="28.0" text="date">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="lblIssueId" layoutX="111.0" layoutY="28.0" text="id">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="353.0" layoutY="28.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <JFXTextField fx:id="txtBookName" labelFloat="true" layoutX="121.0" layoutY="76.0" prefHeight="25.0" prefWidth="108.0" promptText="Book Name" />
+            <JFXButton buttonType="RAISED" layoutX="149.0" layoutY="129.0" onAction="#addTableOnAction" style="-fx-background-color: black; -fx-background-radius: 30;" text="Add" textFill="#fffbfb">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="296.0" layoutY="129.0" onAction="#removeTableOnAction" style="-fx-background-color: black; -fx-background-radius: 30;" text="Remove" textFill="#fffbfb">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXTextField fx:id="txtBookId" labelFloat="true" layoutX="14.0" layoutY="76.0" onAction="#getBNameOnAction" prefHeight="25.0" prefWidth="88.0" promptText="Enter Book Id" />
+            <TableView fx:id="tblIssueToday" layoutX="40.0" layoutY="189.0" prefHeight="173.0" prefWidth="474.0" style="-fx-background-radius: 30;">
+              <columns>
+                <TableColumn fx:id="colIid" prefWidth="54.0" text="Issue Id" />
+                <TableColumn fx:id="colMemId" prefWidth="52.0" text="Mem Id" />
+                  <TableColumn fx:id="colBookId" prefWidth="61.0" text="Book Id" />
+                  <TableColumn fx:id="colBookName" prefWidth="94.0" text="Book Name" />
+                  <TableColumn fx:id="colIDate" prefWidth="113.0" text="Issue Date" />
+                  <TableColumn fx:id="colReturnDate" prefWidth="75.0" text="Return Date" />
+              </columns>
+            </TableView>
+            <JFXTextField fx:id="txtReturn" labelFloat="true" layoutX="394.0" layoutY="76.0" prefHeight="25.0" prefWidth="109.0" promptText="Return Date" />
+            <JFXComboBox fx:id="cmbWeeks" labelFloat="true" layoutX="245.0" layoutY="76.0" onAction="#cmbWeeksOnAction" promptText="No of weeks" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="521.0" layoutY="426.0" prefHeight="153.0" prefWidth="538.0" style="-fx-background-color: #e4d4d8; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="25.0" layoutY="21.0" text="BFId">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="lblBookFeeId" layoutX="89.0" layoutY="21.0" text="id">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <JFXComboBox fx:id="cmbNoOfBooks" labelFloat="true" layoutX="25.0" layoutY="64.0" onAction="#cmbTotal" promptText="No of Books" />
+            <Label layoutX="23.0" layoutY="112.0" text="Total Fee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="lblTotalFee" layoutX="102.0" layoutY="112.0" text="fee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="289.0" layoutY="81.0" text="Balance">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="lblBalance" layoutX="378.0" layoutY="81.0" text="balance">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <JFXButton buttonType="RAISED" layoutX="439.0" layoutY="106.0" onAction="#billOnAction" style="-fx-background-color: black; -fx-background-radius: 30;" text="Print Bill" textFill="#fffbfb">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXTextField fx:id="txtCash" labelFloat="true" layoutX="289.0" layoutY="29.0" onAction="#CashOnAction" promptText="Cash" />
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="950.0" layoutY="586.0" onAction="#saveDetailsOnAction" style="-fx-background-color: black; -fx-background-radius: 30;" text="Save Details" textFill="#fffbfb">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <AnchorPane layoutX="14.0" layoutY="299.0" prefHeight="197.0" prefWidth="496.0" style="-fx-background-color: #9deed4; -fx-background-radius: 30;">
+         <children>
+            <JFXTextField fx:id="txtLastIid" labelFloat="true" layoutX="248.0" layoutY="17.0" onAction="#txtLastReturnOnAction" promptText="Enter Issue Id">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <Label layoutX="14.0" layoutY="19.0" text="Check  Return details :-">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblLastReturn" layoutX="11.0" layoutY="75.0" prefHeight="108.0" prefWidth="474.0" style="-fx-background-radius: 30;">
+              <columns>
+                <TableColumn fx:id="columnRid" prefWidth="75.0" text="Return Id" />
+                <TableColumn fx:id="columnIid" prefWidth="75.0" text="Issue Id" />
+                  <TableColumn fx:id="columnBid" prefWidth="75.0" text="Book Id" />
+                  <TableColumn fx:id="columnRDate" prefWidth="75.0" text="Return Date" />
+                  <TableColumn fx:id="columnMRDate" prefWidth="75.0" text="MR Date" />
+                  <TableColumn fx:id="columnLateDates" prefWidth="98.0" text="Late Dates" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="503.0" prefHeight="71.0" prefWidth="496.0" style="-fx-background-color: #f8cbea; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="14.0" layoutY="23.0" text="Membership Expire Date :-">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblExpireDate" layoutX="220.0" layoutY="25.0" prefHeight="17.0" prefWidth="88.0" textFill="#f22323">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="349.0" layoutY="19.0" onAction="#updateOnAction" style="-fx-background-color: black; -fx-background-radius: 30;" text="Update" textFill="#fffbfb">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

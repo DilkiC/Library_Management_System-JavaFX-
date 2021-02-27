@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="625.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBooksController">
+   <children>
+      <ImageView fitHeight="625.0" fitWidth="616.0" layoutX="474.0" layoutY="10.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/openBookBack.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtBName" labelFloat="true" layoutX="333.0" layoutY="109.0" promptText="Book Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtBPrice" labelFloat="true" layoutX="589.0" layoutY="109.0" promptText="Price">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="cmbSecName" labelFloat="true" layoutX="65.0" layoutY="202.0" onAction="#cmbSecNameOnAciton" prefHeight="25.0" prefWidth="157.0" promptText="Section Name" />
+      <JFXTextField fx:id="txtSectionId" labelFloat="true" layoutX="333.0" layoutY="200.0" promptText="Section Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPubid" labelFloat="true" layoutX="333.0" layoutY="298.0" promptText="Publisher Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPubcontact" labelFloat="true" layoutX="844.0" layoutY="298.0" promptText="Publisher Contact">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPubaddress" labelFloat="true" layoutX="589.0" layoutY="298.0" prefHeight="30.0" prefWidth="157.0" promptText="Publisher Address">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPubName" labelFloat="true" layoutX="65.0" layoutY="298.0" onAction="#txtPubNameOnAction" promptText="Publisher Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtAuthorName" labelFloat="true" layoutX="65.0" layoutY="406.0" onAction="#txtANameOnAction" promptText="Author Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtAuthorId" labelFloat="true" layoutX="333.0" layoutY="406.0" promptText="Author Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtBookId" labelFloat="true" layoutX="65.0" layoutY="109.0" promptText="Book Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <Label layoutX="65.0" layoutY="38.0" text="Add Books">
+         <font>
+            <Font name="Angsana New Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="344.0" layoutY="541.0" onAction="#btnAddOnAction" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Add" textFill="#fcf8f8">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

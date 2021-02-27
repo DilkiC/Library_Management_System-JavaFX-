@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="625.0" prefWidth="1072.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LMemberRegistrationFormController">
+   <children>
+      <ImageView fitHeight="625.0" fitWidth="616.0" layoutX="474.0" layoutY="10.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/openBookBack.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="24.0" layoutY="78.0" prefHeight="532.0" prefWidth="750.0" style="-fx-background-color: cce4ee; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="27.0" layoutY="31.0" prefHeight="20.0" prefWidth="183.0" text="Member Id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblId" layoutX="203.0" layoutY="34.0" prefHeight="19.0" prefWidth="61.0" text="Id" textFill="#4042bc">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="372.0" layoutY="31.0" text="Membership Date">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="562.0" layoutY="30.0" prefHeight="17.0" prefWidth="95.0" text="Date" textFill="#4042bc">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="35.0" layoutY="32.0" text="Member Registration">
+         <font>
+            <Font name="Angsana New Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbUpdate" labelFloat="true" layoutX="52.0" layoutY="400.0" onAction="#cmbUpdateOnAction" prefHeight="25.0" prefWidth="183.0" promptText="Select Update Type" />
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="53.0" layoutY="203.0" onAction="#txtNameOnAction" prefHeight="30.0" prefWidth="183.0" promptText="Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="53.0" layoutY="328.0" prefHeight="30.0" prefWidth="183.0" promptText="Address">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="53.0" layoutY="267.0" prefHeight="30.0" prefWidth="183.0" promptText="Contact">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRegFee" labelFloat="true" layoutX="53.0" layoutY="462.0" prefHeight="30.0" prefWidth="183.0" promptText="Registration Fee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtExDate" labelFloat="true" layoutX="53.0" layoutY="531.0" prefHeight="30.0" prefWidth="183.0" promptText="Membership Expire Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="353.0" layoutY="219.0" orientation="VERTICAL" prefHeight="347.0" prefWidth="0.0" />
+      <JFXTextField fx:id="txtCash" labelFloat="true" layoutX="392.0" layoutY="328.0" onAction="#cashOnAction" promptText="Cash">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="549.0" layoutY="530.0" onAction="#registerOnAction" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Register" textFill="#fcf8f8">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="549.0" layoutY="461.0" onAction="#billOnAction" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Print Bill" textFill="#fcf8f8">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtBalance" labelFloat="true" layoutX="392.0" layoutY="397.0" promptText="Balance">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee" labelFloat="true" layoutX="392.0" layoutY="267.0" promptText="Fee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

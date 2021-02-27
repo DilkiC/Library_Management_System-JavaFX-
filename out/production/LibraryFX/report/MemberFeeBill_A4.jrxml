@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MemberFeeBill_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c8ea7a2b-874b-47a8-abd6-21265f00c84a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="MemberId" class="java.lang.String"/>
+	<parameter name="Fee" class="java.lang.String"/>
+	<parameter name="Cash" class="java.lang.String"/>
+	<parameter name="Balance" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="221" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="10" width="100" height="30" uuid="2af0a2e9-a768-4b73-bb92-4d3d438d798b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="450" y="10" width="100" height="30" uuid="4e25d0fe-915d-4a7c-8a48-bc100b9733d8"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="66" width="100" height="30" uuid="b2785398-07c8-46ff-b34a-bdcf0514a08e"/>
+				<text><![CDATA[Member Id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="66" width="100" height="30" uuid="e0cf1463-0ce7-4d54-b697-ffb008e81102"/>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="100" width="100" height="30" uuid="0321d89c-5c13-4c56-ace0-028f939a4c69"/>
+				<text><![CDATA[Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="180" width="100" height="30" uuid="a8113adc-6e00-4f07-a541-0dc7289e2f0c"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="140" width="100" height="30" uuid="8ca8ac85-0e2c-4040-bc0f-84844e741418"/>
+				<text><![CDATA[Cash]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="100" width="100" height="30" uuid="7d01a69c-d06a-474d-b903-422b8c4b252c"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="140" width="100" height="30" uuid="40441823-8272-45ae-a46f-da4cdb9ac9c7"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="180" width="100" height="30" uuid="acb5c25b-3dcb-464b-ac98-a9e76f46b68e"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

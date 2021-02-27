@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootRegister" prefHeight="625.0" prefWidth="1072.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LMemberManageFormController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="65.0" prefHeight="557.0" prefWidth="882.0" style="-fx-background-color: cce4ee; -fx-background-radius: 30;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="767.0" layoutY="241.0" onAction="#dashboardOnAction" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Dashboard" textFill="#fcf8f8">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="767.0" layoutY="146.0" onAction="#updateOnAction" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Update" textFill="#fcf8f8">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtMemName" labelFloat="true" layoutX="43.0" layoutY="180.0" prefHeight="30.0" prefWidth="197.0" promptText="Name">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtMemAddress" labelFloat="true" layoutX="43.0" layoutY="340.0" prefHeight="30.0" prefWidth="197.0" promptText="Address">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtMemContact" labelFloat="true" layoutX="43.0" layoutY="259.0" prefHeight="30.0" prefWidth="197.0" promptText="Contact">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="779.0" layoutY="258.0" onAction="#removeOnAction" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Remove" textFill="#fcf8f8">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblRegister" layoutX="21.0" layoutY="420.0" prefHeight="170.0" prefWidth="752.0" style="-fx-background-radius: 30;">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="MemId" />
+          <TableColumn fx:id="colName" prefWidth="93.0" text="MemName" />
+            <TableColumn fx:id="colContact" prefWidth="102.0" text="MemContact" />
+            <TableColumn fx:id="colAddress" prefWidth="100.0" text="MemAddress" />
+            <TableColumn fx:id="colDate" prefWidth="86.0" text="MemDate" />
+            <TableColumn fx:id="colUpdateType" prefWidth="122.0" text="MemUpdateType" />
+            <TableColumn fx:id="colFee" prefWidth="68.0" text="MemFee" />
+            <TableColumn fx:id="colExpireDate" prefWidth="106.0" text="MemExpireDate" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtFee" labelFloat="true" layoutX="472.0" layoutY="259.0" prefHeight="30.0" prefWidth="197.0" promptText="Registration Fee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtExpireDate" labelFloat="true" layoutX="472.0" layoutY="340.0" prefHeight="30.0" prefWidth="197.0" promptText="Membership Expire Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="43.0" layoutY="99.0" onAction="#searchOnAction" prefHeight="30.0" prefWidth="197.0" promptText="Member Id">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMDate" labelFloat="true" layoutX="472.0" layoutY="99.0" prefHeight="30.0" prefWidth="197.0" promptText="Membership Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtType" labelFloat="true" layoutX="472.0" layoutY="183.0" onAction="#txtGetDateFee" prefHeight="25.0" prefWidth="197.0" promptText="Update Type" />
+      <Label layoutX="14.0" layoutY="14.0" text="Member Manage">
+         <font>
+            <Font name="Angsana New Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
